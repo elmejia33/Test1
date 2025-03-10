@@ -39,6 +39,6 @@ ax.scatter(studentData['Retention Rate (%)'], studentData['Student Satisfaction 
 ax.set_xlabel('Retention Rate (%)')
 ax.set_ylabel('Student Satisfaction (%)')
 ax.set_title('Retention Rate vs. Satisfaction Rate')
-ax.set_xlim(80, 110)
-ax.set_ylim(80, 110)
+ax.set_xlim(75, 95)
+ax.set_ylim(75, 95)
 st.pyplot(fig)
