@@ -1,3 +1,10 @@
+import streamlit as st
+import plotly.express as px
+import pandas as pd
+import folium
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 studentData = pd.read_csv("university_student_dashboard_data.csv")
 st.title("Student Admissions Data")
 #line Admissions
