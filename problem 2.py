@@ -39,14 +39,6 @@ ax.scatter(studentData['Retention Rate (%)'], studentData['Student Satisfaction 
 ax.set_xlabel('Retention Rate (%)')
 ax.set_ylabel('Student Satisfaction (%)')
 ax.set_title('Retention Rate vs. Satisfaction Rate')
-fig.update_layout(
-    xaxis=dict(
-        title="Retention Rate (%)",
-        range=[0, max(studentData["Retention Rate (%)"]) + 5]  # Starting from 0
-    ),
-    yaxis=dict(
-        title="Student Satisfaction (%)",
-        range=[min(studentData["Student Satisfaction (%)"]) - 5, max(studentData["Student Satisfaction (%)"]) + 5]  # Adjust y-axis range
-    )
-)
+ax.set_xlim(50, 110)
+ax.set_ylim(50, 110)
 st.pyplot(fig)
