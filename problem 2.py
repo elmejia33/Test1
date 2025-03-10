@@ -4,6 +4,7 @@ import pandas as pd
 #import folium
 #import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 
 studentData = pd.read_csv("university_student_dashboard_data.csv")
 st.title("Student Admissions Data")
@@ -41,4 +42,6 @@ ax.set_ylabel('Student Satisfaction (%)')
 ax.set_title('Retention Rate vs. Satisfaction Rate')
 ax.set_xlim(75, 95)
 ax.set_ylim(75, 95)
+ax.xaxis.set_major_locator(MultipleLocator(5))
+ax.yaxis.set_major_locator(MultipleLocator(5))
 st.pyplot(fig)
